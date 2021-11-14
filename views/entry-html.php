@@ -6,6 +6,7 @@
     }
     return"<article class='entry-comment'>
             <div class='flex justify-between'>
+                <a href='javascript: window.history.back()' class='button link'>Back</a>
                 <h1>$entry_Data->title</h1>
                 <small class='date'>$entry_Data->date_created</small>
             </div>
