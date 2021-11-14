@@ -16,7 +16,7 @@
         <fieldset>
             <legend name='form_title' id='form_title'>xxx(needs a dynamic title)</legend>
             <label for=''>Title</label>
-            <input type='text' name='title' maxlength='150' value='$entry_data->title' required>
+            <input type='text' name='title' maxlength='150' value='$entry_data->title'>
             <p id='title-warning'></p>
             <label for=''>Entry</label>
             <textarea name='entry'>$entry_data->entry_text</textarea>
@@ -26,5 +26,23 @@
                 <p id='editor-message'>$entry_data->message</p>
             </fieldset>
         </fieldset> 
-    </form>";
+    </form>
+    <script type='text/javascript' src='js/tinymce/tinymce.min.js'></script>
+    <script type='text/javascript'>
+        tinymce.init
+        (
+            {
+                selector: 'textarea',
+                plugins: 'image',
+                setup: function(editor)
+                {
+                    editor.on('change', function(e)
+                    {
+                        update_editor_message();
+                    });
+                }
+            }
+        );
+    </script>";
+    
 ?>

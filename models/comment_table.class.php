@@ -20,5 +20,11 @@
             $statement = $this->make_Statement($sql, $data);
             return $statement;
         }
+        public function delete_By_Id($id)
+        {
+            $sql = "DELETE FROM comment WHERE entry_id = ?";
+            $data = array($id);
+            $statement = $this->make_Statement($sql, $data);
+        }
     }
 ?>
