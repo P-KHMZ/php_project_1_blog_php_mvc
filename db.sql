@@ -14,7 +14,7 @@ CREATE TABLE comment
     entry_id INT NOT NULL,
     author VARCHAR(75),
     txt TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    dates TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(comment_id),
     FOREIGN KEY(entry_id) REFERENCES blog_entry(entry_id)
 )
