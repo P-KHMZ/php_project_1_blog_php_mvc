@@ -143,6 +143,9 @@ a{
 
 form#editor{
     width: 300px;
+form#editor
+{
+    width: 650px;
     margin: 0px;
     padding: 0px;
 }

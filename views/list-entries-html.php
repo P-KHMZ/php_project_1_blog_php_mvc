@@ -12,8 +12,13 @@
         //helps to separate the url variables
         $entries_html .="<li>
             <h2>$entry->title</h2>
+<<<<<<< HEAD
             <div>$entry->intro
                 <a href='$href' class='button green'>Read more</a>
+=======
+            <div>Read
+                <a href='$href'>...more</a>
+>>>>>>> main
             </div>
         </li>";
     }
