@@ -4,7 +4,7 @@
     {
         trigger_error('views/display-comments-html.php needs $all_comments');
     }
-    $all_comments_html = "<ul id = 'comments'>";
+    $all_comments_html = "<ul id = 'comments' class='list-comments'>";
         while($comments_data = $all_comments->fetchObject())
         {
             $all_comments_html .="<li>

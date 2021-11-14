@@ -14,6 +14,7 @@
     $db_connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $page_data -> addCss("css/blog.css");
+    $page_data -> addCss("css/layout.css");
 
     if($is_clicked)
     {
