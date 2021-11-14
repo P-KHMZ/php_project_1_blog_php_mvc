@@ -52,14 +52,24 @@
             $model = $statement ->fetchObject();
             return $model;
         }
-
+// >>>New code
         public function delete_Entry($id)
         {
+            $this->delete_Comment_By_Id($id);
             $sql  = "DELETE FROM blog_entry WHERE entry_id=?";
             $data = array($id);
             $statement = $this->make_Statement($sql, $data);
         }
-
+        //the method deletes all the comments related to a certain $id
+        private function delete_Comment_By_Id($id)
+        {
+            include_once "models/Comment_Table.class.php";
+            //create a Comment_Table object
+            $comments = new Comment_Table($this->db_connection);
+            //delete any comments before deleting an entry
+            $comments->delete_By_Id($id);
+        }
+// >>end
         public function update_Entry($id, $title, $entry)
         {
             $sql = "UPDATE blog_entry SET title=?,
