@@ -3,23 +3,19 @@
     margin: 0;
     box-sizing: border-box;
 }
-form#editor
-{
+form#editor{
     width: 300px;
     margin: 0px;
     padding: 0px;
 }
-form#editor label, form#editor input[type='text']
-{
+form#editor label, form#editor input[type='text']{
     display: block;
 }
-form#editor #editor-buttons
-{
+form#editor #editor-buttons{
     border: none;
     text-align: right;
 }
-form#editor textarea, form#editor input[type='text']
-{
+form#editor textarea, form#editor input[type='text']{
     width: 90%;
     margin-bottom: 2em;
 }
