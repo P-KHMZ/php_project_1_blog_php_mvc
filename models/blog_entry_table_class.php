@@ -1,11 +1,12 @@
 <?php
-    class Blog_Entry_Table
+    include_once "models/Table.class.php";
+    class Blog_Entry_Table extends Table
     {
-        private $db_connection;
-        public function __construct($db)
-        {
-            $this->db_connection = $db;
-        }
+        // private $db_connection;
+        // public function __construct($db)
+        // {
+        //     $this->db_connection = $db;
+        // }
 
         public function save_Entry($title, $entry)
         {
@@ -88,21 +89,21 @@
             return $statement;
         }
 
-        public function make_Statement($sql, $data = NULL)
-        {
-            $statement = $this ->db_connection ->prepare($sql);
-            try
-            {
-                $statement ->execute($data);
-            }
-            catch(Exception $e)
-            {
-                $exception_Message = "<p>You tried to run this sql: $sql</p>
-                                    <p>Exception:$e</p>";
-                trigger_error($exception_Message);
-            }
-            return $statement;
-        }
+        // public function make_Statement($sql, $data = NULL)
+        // {
+        //     $statement = $this ->db_connection ->prepare($sql);
+        //     try
+        //     {
+        //         $statement ->execute($data);
+        //     }
+        //     catch(Exception $e)
+        //     {
+        //         $exception_Message = "<p>You tried to run this sql: $sql</p>
+        //                             <p>Exception:$e</p>";
+        //         trigger_error($exception_Message);
+        //     }
+        //     return $statement;
+        // }
 
    
     }
