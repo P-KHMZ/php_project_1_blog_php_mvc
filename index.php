@@ -9,6 +9,7 @@
     $page_data -> addCss('css/blog.css');
     
     $page_data ->content = "<h1>Guest portal</h1>";
+    $page_data ->content.="<nav><a href='index.php'>Home</a></nav>";
     $db_info ="mysql:host=localhost;dbname=simple_blog";
     $db_user ="root";
     $db_pass = "";
