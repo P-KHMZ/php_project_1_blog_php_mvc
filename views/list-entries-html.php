@@ -4,7 +4,7 @@
     {
         trigger_error('views/list-entries-html.php needs $entries');
     }
-    $entries_html = "<ul id = 'blog-entries'>";
+    $entries_html = "<div class='content'><ul id = 'blog-entries' class='list-index-comments'>";
     //remember each one row temporarily as $entry
     while($entry = $entries->fetchObject())
     {
@@ -12,11 +12,16 @@
         //helps to separate the url variables
         $entries_html .="<li>
             <h2>$entry->title</h2>
+<<<<<<< HEAD
+            <div>$entry->intro
+                <a href='$href' class='button green'>Read more</a>
+=======
             <div>Read
                 <a href='$href'>...more</a>
+>>>>>>> main
             </div>
         </li>";
     }
-    $entries_html .="</ul>";
+    $entries_html .="</ul></div>";
     return $entries_html;
 ?>

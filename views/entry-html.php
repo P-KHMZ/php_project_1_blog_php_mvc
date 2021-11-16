@@ -4,9 +4,12 @@
     {
         trigger_error('views/entry-html.php needs an $entry_Data_Found');
     }
-    return"<article>
-            <h1>$entry_Data->title</h1>
-            <div class='date'>$entry_Data->date_created</div>
+    return"<article class='entry-comment'>
+            <div class='flex justify-between'>
+                <a href='javascript: window.history.back()' class='button link'>Back</a>
+                <h1>$entry_Data->title</h1>
+                <small class='date'>$entry_Data->date_created</small>
+            </div>
             $entry_Data->entry_text
         </article>";
 
